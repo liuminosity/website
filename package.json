@@ -2,7 +2,7 @@
   "name": "anthony's site",
   "version": "0.0.1",
   "description": "anthony's site",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
