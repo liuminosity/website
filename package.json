@@ -1,7 +1,7 @@
 {
-  "name": "anthony's site",
+  "name": "anthonyspage",
   "version": "0.0.1",
-  "description": "anthony's site",
+  "description": "anthonys site",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
