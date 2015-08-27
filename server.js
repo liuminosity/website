@@ -1,11 +1,18 @@
 var express = require('express')
 var app = express()
+var partials = require('express-partials');
 
-app.set('port', (process.env.PORT || 5000))
-app.use(express.static(__dirname + '/public'))
+
+app.configure(function() {
+  app.set('port', (process.env.PORT || 5000))
+  app.set('views', __dirname + '/views');
+  app.set('view engine', 'ejs');
+  app.use(partials());
+  app.use(express.static(__dirname + '/public'));
+});
 
 app.get('/', function(request, response) {
-  response.send('Hello World!')
+  response.sendFile('/index.html')
 })
 
 app.listen(app.get('port'), function() {
